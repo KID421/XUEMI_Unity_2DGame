@@ -213,6 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1485502520}
   - component: {fileID: 1485502521}
+  - component: {fileID: 1485502522}
   m_Layer: 0
   m_Name: "\u7DF4\u7FD2\u7269\u4EF6"
   m_TagString: Untagged
@@ -241,7 +242,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485502519}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e71b6df091432ab41b64ddbd04389918, type: 3}
   m_Name: 
@@ -253,3 +254,15 @@ MonoBehaviour:
   skin: {r: 0, g: 0, b: 0, a: 1}
   posStart: {x: 30, y: 1, z: 50}
   trap: {fileID: 0}
+--- !u!114 &1485502522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485502519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd31399e4004c541845c2de411378a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
