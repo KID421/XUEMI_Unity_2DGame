@@ -469,6 +469,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38cecc536f93184aad1a9e6f0fb4370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  traPlayer: {fileID: 553692278}
+  aniPlayer: {fileID: 553692276}
+  sprPlayer: {fileID: 553692277}
+  speed: 10
 --- !u!1 &799970923
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +505,7 @@ MonoBehaviour:
   prop: {fileID: 2147307682024050530, guid: 53c5d7484a6523b45ba81d676c1fb617, type: 3}
   xMin: -7.1
   xMax: 7.1
-  interval: 0.1
+  interval: 0.7
 --- !u!4 &799970925
 Transform:
   m_ObjectHideFlags: 0
