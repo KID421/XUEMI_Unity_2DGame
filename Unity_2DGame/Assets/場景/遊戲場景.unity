@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 123368066}
   - component: {fileID: 123368065}
+  - component: {fileID: 123368067}
   m_Layer: 0
   m_Name: "\u7246\u58C1\u5DE6\u908A"
   m_TagString: Untagged
@@ -200,6 +201,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &123368067
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123368064}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.96}
+  m_EdgeRadius: 0
 --- !u!1 &198222668
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +395,8 @@ GameObject:
   - component: {fileID: 553692277}
   - component: {fileID: 553692276}
   - component: {fileID: 553692279}
+  - component: {fileID: 553692281}
+  - component: {fileID: 553692280}
   m_Layer: 0
   m_Name: "\u5C0F\u6050\u9F8D"
   m_TagString: Untagged
@@ -469,10 +498,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38cecc536f93184aad1a9e6f0fb4370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  traPlayer: {fileID: 553692278}
-  aniPlayer: {fileID: 553692276}
-  sprPlayer: {fileID: 553692277}
   speed: 10
+--- !u!70 &553692280
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553692275}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.1}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0
+--- !u!50 &553692281
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553692275}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &799970923
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +568,7 @@ MonoBehaviour:
   prop: {fileID: 2147307682024050530, guid: 53c5d7484a6523b45ba81d676c1fb617, type: 3}
   xMin: -7.1
   xMax: 7.1
-  interval: 0.7
+  interval: 1
 --- !u!4 &799970925
 Transform:
   m_ObjectHideFlags: 0
@@ -823,7 +886,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1160554523}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1718159431}
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1160554523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1333,6 +1407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1646344541}
   - component: {fileID: 1646344540}
+  - component: {fileID: 1646344542}
   m_Layer: 0
   m_Name: "\u5730\u677F"
   m_TagString: Untagged
@@ -1403,6 +1478,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1646344542
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646344539}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 10, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.16}
+  m_EdgeRadius: 0
 --- !u!1 &1708310236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,6 +1514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1708310238}
   - component: {fileID: 1708310237}
+  - component: {fileID: 1708310239}
   m_Layer: 0
   m_Name: "\u7246\u58C1\u53F3\u908A"
   m_TagString: Untagged
@@ -1483,6 +1585,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1708310239
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708310236}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.96}
+  m_EdgeRadius: 0
 --- !u!1 &1718159430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,6 +1640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3512078d7eb0963459a38c90134f0575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  final: {fileID: 198222668}
 --- !u!4 &1718159432
 Transform:
   m_ObjectHideFlags: 0
@@ -1607,7 +1736,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1940545261}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1718159431}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1940545261
 MonoBehaviour:
   m_ObjectHideFlags: 0
